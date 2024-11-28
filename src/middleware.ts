@@ -2,8 +2,8 @@ import {withAuth} from "@kinde-oss/kinde-auth-nextjs/middleware";
 import {NextRequest} from "next/server";
 
 export default withAuth(
-  async () => {
-    // console.log(req)
+  async (req: NextRequest) => {
+    console.log(req)
   }, {
     isReturnToCurrentPage: true
   }
